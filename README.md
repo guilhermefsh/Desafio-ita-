@@ -23,6 +23,7 @@ Seu projeto:
 - **DEVE** estar no [GitHub](https://github.com/) ou [GitLab](https://gitlab.com/)
 - **NÃO DEVE** fazer _fork_ de nenhum outro projeto
 - **DEVE** ter pelo menos 1 commit por cada endpoint (mínimo de 3 commits)
+<<<<<<< HEAD
   - Queremos ver a evolução do seu projeto com o tempo ;)
 - Todos os commits **DEVEM** ser feitos pelo mesmo usuário que criou o projeto
   - Entendemos que algumas pessoas tem usuários pessoais e profissionais, ou um usuário diferente usado para estudar. Atenção com isso se você for uma dessas pessoas!
@@ -30,6 +31,15 @@ Seu projeto:
   - Por exemplo, `/transacao` não é a mesma coisa que `/transacoes`
 - **DEVE** aceitar e responder com objetos exatamente como descritos a seguir
   - Por exemplo, `dataHora` não é a mesma coisa que `data-hora` ou `dtTransacao`
+=======
+    - Queremos ver a evolução do seu projeto com o tempo ;)
+- Todos os commits **DEVEM** ser feitos pelo mesmo usuário que criou o projeto
+    - Entendemos que algumas pessoas tem usuários pessoais e profissionais, ou um usuário diferente usado para estudar. Atenção com isso se você for uma dessas pessoas!
+- **DEVE** seguir exatamente os _endpoints_ descritos a seguir
+    - Por exemplo, `/transacao` não é a mesma coisa que `/transacoes`
+- **DEVE** aceitar e responder com objetos exatamente como descritos a seguir
+    - Por exemplo, `dataHora` não é a mesma coisa que `data-hora` ou `dtTransacao`
+>>>>>>> 67b5093 (first commit)
 - **NÃO DEVE** utilizar quaisquer sistemas de banco de dados (como H2, MySQL, PostgreSQL, ...) ou cache (como Redis, Memcached, Infinispan, ...)
 - **DEVE** armazenar todos os dados **em memória**
 - **DEVE** aceitar e responder apenas com [JSON](https://www.json.org/json-pt.html)
@@ -71,11 +81,19 @@ A API só aceitará transações que:
 Como resposta, espera-se que este endpoint responda com:
 
 - `201 Created` sem nenhum corpo
+<<<<<<< HEAD
   - A transação foi aceita (ou seja foi validada, está válida e foi registrada)
 - `422 Unprocessable Entity` sem nenhum corpo
   - A transação **não** foi aceita por qualquer motivo (1 ou mais dos critérios de aceite não foram atendidos - por exemplo: uma transação com valor menor que `0`)
 - `400 Bad Request` sem nenhum corpo
   - A API não compreendeu a requisição do cliente (por exemplo: um JSON inválido)
+=======
+    - A transação foi aceita (ou seja foi validada, está válida e foi registrada)
+- `422 Unprocessable Entity` sem nenhum corpo
+    - A transação **não** foi aceita por qualquer motivo (1 ou mais dos critérios de aceite não foram atendidos - por exemplo: uma transação com valor menor que `0`)
+- `400 Bad Request` sem nenhum corpo
+    - A API não compreendeu a requisição do cliente (por exemplo: um JSON inválido)
+>>>>>>> 67b5093 (first commit)
 
 #### 2.2.2. Limpar Transações: `DELETE /transacao`
 
@@ -84,7 +102,11 @@ Este endpoint simplesmente **apaga todos os dados de transações** que estejam 
 Como resposta, espera-se que este endpoint responda com:
 
 - `200 OK` sem nenhum corpo
+<<<<<<< HEAD
   - Todas as informações foram apagadas com sucesso
+=======
+    - Todas as informações foram apagadas com sucesso
+>>>>>>> 67b5093 (first commit)
 
 #### 2.2.3. Calcular Estatísticas: `GET /estatistica`
 
@@ -115,8 +137,13 @@ Os campos no JSON acima significam o seguinte:
 Como resposta, espera-se que este endpoint responda com:
 
 - `200 OK` com os dados das estatísticas
+<<<<<<< HEAD
   - Um JSON com os campos `count`, `sum`, `avg`, `min` e `max` todos preenchidos com seus respectivos valores
   - **Atenção!** Quando não houverem transações nos últimos 60 segundos considere todos os valores como `0` (zero)
+=======
+    - Um JSON com os campos `count`, `sum`, `avg`, `min` e `max` todos preenchidos com seus respectivos valores
+    - **Atenção!** Quando não houverem transações nos últimos 60 segundos considere todos os valores como `0` (zero)
+>>>>>>> 67b5093 (first commit)
 
 ## 4. Extras
 
